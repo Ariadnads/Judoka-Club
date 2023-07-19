@@ -1,0 +1,9 @@
+.ilustration::after {
+    background-image: black;
+    position: absolute;
+         
+}
+.ilustration {
+    position: relative;
+    z-index: 0;
+}
