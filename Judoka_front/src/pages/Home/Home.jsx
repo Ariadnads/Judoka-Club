@@ -50,7 +50,7 @@ function Home() {
             variant="h1"
             sx={{ textAlign: "center", color: "white" }}
           >
-            Club Judoka
+            Judoka club
           </Typography>
           <Link to="/login">
             <Button

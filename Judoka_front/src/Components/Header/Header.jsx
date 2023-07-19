@@ -14,7 +14,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
-import image from "../../../../imagenes/club-judoka-low-resolution-logo-black-on-transparent-background.png"
+import image from "../../../../imagenes/logo1.png"
 
 
 const pages = [
@@ -49,7 +49,7 @@ function Header() {
         <Toolbar sx={{ zIndex: '2'}}>
           <Link to="/">
             {" "}
-            <img src={image} alt="" style={{ width: "70px" }} />
+            <img src={image} alt="" style={{ width: "190px", justifyContent:"center"}} />
           </Link>
           {/* <AdbIcon src={image} sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
 

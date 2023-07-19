@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 import { Link } from 'react-router-dom'
-import image from "../../../../imagenes/foto-carnet-jaime.jpg";
+import image from "../../../../imagenes/avatar_pefil.png";
 import license from "../../../../imagenes/licencia.jpg"
 
 const ProfileCardInfo = ({judokas}) => {
@@ -30,7 +30,7 @@ const ProfileCardInfo = ({judokas}) => {
     setOpen(false);
   };
  
-  // Contenido dummy por si judoka está vacío.
+/*   // Contenido dummy por si judoka está vacío.
   const dummyContent = {
     name: 'Nombre',
     lastName: 'Apellido',
@@ -38,9 +38,8 @@ const ProfileCardInfo = ({judokas}) => {
     dojo: { name: 'Dojo' },
     nivel: 'Nivel',
   }
-
   // Usa judoka si está definido, si no, usa el contenido dummy. 
- // const content = judoka  || [dummyContent]  
+ // const content = judoka  || [dummyContent]   */
   return (
      <Container
       sx={{
@@ -77,7 +76,7 @@ const ProfileCardInfo = ({judokas}) => {
           {judokas.map((judoka, index) => {
             return (
               <Card
-              key={index}
+                key={index}
                 sx={{
                   width: "100%",
                   marginBottom: "20px",
@@ -129,7 +128,7 @@ const ProfileCardInfo = ({judokas}) => {
                           />
                           <ListItemText
                             primary="Fecha de nacimiento"
-                            secondary={judoka.date_of_birth}
+                            secondary={judoka.date_of_birth.slice(0, 10)}
                             primaryTypographyProps={{
                               fontSize: "16px",
                               color: "#3430E4",

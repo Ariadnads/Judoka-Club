@@ -24,7 +24,7 @@ function ProfilePage() {
 
   useEffect(() => {
     getJudokaInfo()
-  }, [])  
+  }, [user])  
 
   if (user.length !== 0) {
     return (

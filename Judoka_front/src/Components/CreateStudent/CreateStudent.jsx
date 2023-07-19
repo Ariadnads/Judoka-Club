@@ -17,7 +17,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { getAllDojos } from "../../services/dojo.service";
-import { redirect } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
  
 
 
@@ -29,7 +29,7 @@ function CreateStudent() {
   const [nivel, setnivel] = useState("");
   const userEmail = localStorage.getItem("userEmail");
   const [dojos, setDojos] = useState([]);
-
+  const navigate = useNavigate()
     const [value, setValue] = React.useState(null);
 
   const handlename = (e) => {
@@ -74,7 +74,7 @@ function CreateStudent() {
     };
     try {
       const result = await addJudoka(judokaData)
-      
+      navigate('/profilepage')
     } catch (error) {
       console.log("Error al enviar la solicitud:", error)
     }
